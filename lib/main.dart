@@ -15,13 +15,13 @@ class _MyAppState extends State<MyApp> {
       "What\'s your favourite color?",
       "What\'s your favourite animal?",
     ];
-  var questionIndex = 0;
+  var _questionIndex = 0;
 
   void answerQuestion() {
     setState(() {
-      questionIndex = questionIndex + 1;
+      _questionIndex = _questionIndex + 1;
     });
-    print(questionIndex);
+    print(_questionIndex);
 
   }
 
@@ -35,7 +35,7 @@ class _MyAppState extends State<MyApp> {
         body: Column(
           children: [
             Text(questions[
-                questionIndex]), //question.elementAt(0) is an alternative
+                _questionIndex]), //question.elementAt(0) is an alternative
             RaisedButton(
               onPressed: answerQuestion,
               child: Text('Answer 1'),
